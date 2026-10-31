@@ -65,7 +65,7 @@ export default function App() {
     selectCollection(c.id);
     setTab("chat");
     setWatching(true);
-    
+
   };
 
   const attach = async (files: UploadFile[]) => {
@@ -202,3 +202,4 @@ function ServerDown({ error, onRetry }: { error: string; onRetry: () => void }) 
     </div>
   );
 }
+
