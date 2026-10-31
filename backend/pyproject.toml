@@ -1,0 +1,38 @@
+[project]
+name = "folio"
+version = "0.1.0"
+description = "Chat with any folder of files, locally."
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "pydantic-settings",
+    "httpx",
+    "sse-starlette",
+    "numpy",
+    "pypdf",
+    "python-docx",
+    "openpyxl",
+    "python-pptx",
+    "beautifulsoup4",
+    "lxml",
+    "ebooklib",
+    "chardet",
+    "watchfiles",
+    "python-multipart",
+    "fastembed",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["folio*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
